@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "RvgzzS2059Q3Ge5A23i4jOiJRMT4LRFz+YtRDz93G56MDYxjSBrJkLKERQ293EFdUJGRPXYqcp7eCrjOZHw+kA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Umid\\Desktop\\Api-LikeTourism\\LikeTourismApi\\ServiceLayer\\ServiceLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Umid\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Umid\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
