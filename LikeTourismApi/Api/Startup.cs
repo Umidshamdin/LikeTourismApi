@@ -9,6 +9,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using RepositoryLayer;
+using RepositoryLayer.Repositories;
+using RepositoryLayer.Repositories.Interfaces;
+using ServiceLayer;
+using ServiceLayer.Services;
+using ServiceLayer.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +40,13 @@ namespace Api
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddAutoMapper(typeof(Startup));
+
+
+            services.AddRepositoryLayer();
+            services.AddServiceLayer();
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api", Version = "v1" });

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceLayer.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ServiceLayer.Services
 {
-    class FamousCityService
+    public class FamousCityService:IFamousCityService
     {
     }
 }

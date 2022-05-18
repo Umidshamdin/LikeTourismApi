@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DomainLayer.Configurations;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,11 @@ namespace RepositoryLayer
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
 
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new FamousCityConfiguration());
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

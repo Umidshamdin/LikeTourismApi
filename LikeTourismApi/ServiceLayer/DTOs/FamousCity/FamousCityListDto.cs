@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ServiceLayer.DTOs.FamousCity
 {
-    class FamousCityListDto
+    public class FamousCityListDto
     {
+        public string Name { get; set; }
+
+        public byte[] Image { get; set; }
     }
 }

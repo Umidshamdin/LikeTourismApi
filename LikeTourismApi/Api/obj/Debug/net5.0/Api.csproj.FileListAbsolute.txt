@@ -61,3 +61,13 @@ C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\Reposi
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\RepositoryLayer.pdb
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\DomainLayer.dll
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\DomainLayer.pdb
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\ServiceLayer.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\ServiceLayer.pdb
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ServiceLayer.Services.Interfaces
 {
-    class IFamousCityService
+    public interface IFamousCityService
     {
     }
 }
