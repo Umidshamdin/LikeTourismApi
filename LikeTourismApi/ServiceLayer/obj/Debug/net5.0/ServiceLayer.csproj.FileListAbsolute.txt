@@ -13,3 +13,5 @@ C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\ServiceLayer\obj\Debug\net5
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\ServiceLayer\bin\Debug\net5.0\DomainLayer.dll
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\ServiceLayer\bin\Debug\net5.0\DomainLayer.pdb
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\ServiceLayer\obj\Debug\net5.0\ServiceLayer.csproj.CopyComplete
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\ServiceLayer\bin\Debug\net5.0\RepositoryLayer.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\ServiceLayer\bin\Debug\net5.0\RepositoryLayer.pdb

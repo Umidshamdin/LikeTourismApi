@@ -1467,7 +1467,8 @@
       "ServiceLayer/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
-          "DomainLayer": "1.0.0"
+          "DomainLayer": "1.0.0",
+          "RepositoryLayer": "1.0.0"
         },
         "runtime": {
           "ServiceLayer.dll": {}

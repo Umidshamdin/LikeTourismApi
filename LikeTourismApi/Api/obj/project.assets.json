@@ -1662,7 +1662,8 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "AutoMapper": "11.0.1",
-          "DomainLayer": "1.0.0"
+          "DomainLayer": "1.0.0",
+          "RepositoryLayer": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ServiceLayer.dll": {}
