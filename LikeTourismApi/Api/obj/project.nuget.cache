@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "gnPn8fyfNw+Y1b1eoM0in5cm8XslYi42daVQIYDqLULC0kWa5vEZZNo429xyW3Twq4lZaHHDZ2su9hEyiu6BCw==",
+  "dgSpecHash": "+Vx6Ted/ihRnJi8U11m2gki107BYNr2roMKB1ZUncZm86RFW6lo7Fd35b38sHVWczcFXLjfdq4RlRtfzo7tnBg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Umid\\Desktop\\Api-LikeTourism\\LikeTourismApi\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Umid\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Umid\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Umid\\.nuget\\packages\\fluentvalidation\\11.0.1\\fluentvalidation.11.0.1.nupkg.sha512",
+    "C:\\Users\\Umid\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.0.1\\fluentvalidation.aspnetcore.11.0.1.nupkg.sha512",
+    "C:\\Users\\Umid\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.1\\fluentvalidation.dependencyinjectionextensions.11.0.1.nupkg.sha512",
     "C:\\Users\\Umid\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Umid\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Umid\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

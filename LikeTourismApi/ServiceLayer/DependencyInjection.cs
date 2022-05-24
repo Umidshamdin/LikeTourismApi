@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
+using ServiceLayer.DTOs.FamousCity;
 using ServiceLayer.Services;
 using ServiceLayer.Services.Interfaces;
 using System;
@@ -14,7 +16,7 @@ namespace ServiceLayer
         public static IServiceCollection AddServiceLayer(this IServiceCollection services)
         {
             services.AddScoped<IFamousCityService, FamousCityService>();
-
+            services.AddTransient<IValidator<FamousCityCreateDto>, FamousCityCreateValidator>();
             return services;
         }
     }

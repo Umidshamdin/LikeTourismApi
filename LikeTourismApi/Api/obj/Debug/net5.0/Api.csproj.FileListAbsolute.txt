@@ -71,3 +71,6 @@ C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\Servic
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\ServiceLayer.pdb
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\Humanizer.dll
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\Api\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll

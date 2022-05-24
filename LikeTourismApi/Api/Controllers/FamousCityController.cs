@@ -34,5 +34,13 @@ namespace Api.Controllers
             await _service.InsertAsync(famousCity);
             return Ok();
         }
+
+
+        [HttpPut]
+        [Route("Edit/{id}")]
+        public async Task<IActionResult> Edit([FromRoute] int id,[FromBody] FamousCityEditDto famousCity)
+        {
+            return Ok();
+        }
     }
 }
