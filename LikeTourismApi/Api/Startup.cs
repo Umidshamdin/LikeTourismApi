@@ -42,10 +42,12 @@ namespace Api
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
             services.AddAutoMapper(typeof(MappingProfile));
-
+            
+           
 
             services.AddRepositoryLayer();
             services.AddServiceLayer();
+
 
 
             services.AddSwaggerGen(c =>
@@ -69,7 +71,11 @@ namespace Api
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseCors("CorsPolicy");
+            app.UseCors(builder =>
+            builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
