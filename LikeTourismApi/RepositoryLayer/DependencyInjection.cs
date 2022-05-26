@@ -15,6 +15,8 @@ namespace RepositoryLayer
         {
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IFamousCityRepository, FamousCityRepository>();
+            services.AddScoped<IHotelListRepository, HotelListRepository>();
+
 
             return services;
         }

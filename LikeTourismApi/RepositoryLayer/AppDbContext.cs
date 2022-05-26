@@ -17,6 +17,8 @@ namespace RepositoryLayer
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new FamousCityConfiguration());
+            modelBuilder.ApplyConfiguration(new HotelListConfiguration());
+
             base.OnModelCreating(modelBuilder);
         }
     }
