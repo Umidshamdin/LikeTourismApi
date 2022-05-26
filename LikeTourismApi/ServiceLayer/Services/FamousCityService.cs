@@ -31,5 +31,11 @@ namespace ServiceLayer.Services
         {
             await _repository.CreateAsync(_mapper.Map<FamousCity>(famousCity));
         }
+        public async Task UpdateAsync(int id,FamousCityEditDto famousCity)
+        {
+            var entity = await _repository.GetAsync(id);
+            _mapper.Map(famousCity, entity);
+            await _repository.UpdateAsync(entity);
+        }
     }
 }

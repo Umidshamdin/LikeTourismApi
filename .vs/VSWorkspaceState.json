@@ -2,7 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\LikeTourismApi",
-    "\\LikeTourismApi\\Api"
+    "\\LikeTourismApi\\Api",
+    "\\LikeTourismApi\\Api\\Controllers",
+    "\\LikeTourismApi\\ServiceLayer",
+    "\\LikeTourismApi\\ServiceLayer\\DTOs",
+    "\\LikeTourismApi\\ServiceLayer\\DTOs\\FamousCity",
+    "\\LikeTourismApi\\ServiceLayer\\Mapping",
+    "\\LikeTourismApi\\ServiceLayer\\Services"
   ],
   "SelectedNode": "\\LikeTourismApi\\LikeTourismApi.sln",
   "PreviewInSolutionExplorer": false

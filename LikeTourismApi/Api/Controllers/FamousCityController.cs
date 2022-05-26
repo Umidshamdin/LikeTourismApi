@@ -40,7 +40,8 @@ namespace Api.Controllers
         [Route("Edit/{id}")]
         public async Task<IActionResult> Edit([FromRoute] int id,[FromBody] FamousCityEditDto famousCity)
         {
-            return Ok();
+            await _service.UpdateAsync(id, famousCity);
+            return Ok(famousCity);
         }
     }
 }

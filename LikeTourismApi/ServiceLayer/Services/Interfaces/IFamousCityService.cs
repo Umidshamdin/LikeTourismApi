@@ -12,5 +12,7 @@ namespace ServiceLayer.Services.Interfaces
         Task<List<FamousCityListDto>> GetAllAsync();
 
         Task InsertAsync(FamousCityCreateDto famousCity);
+
+        Task UpdateAsync(int id, FamousCityEditDto famousCity);
     }
 }

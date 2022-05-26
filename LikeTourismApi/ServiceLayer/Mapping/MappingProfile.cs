@@ -15,6 +15,8 @@ namespace ServiceLayer.Mapping
         {
             CreateMap<FamousCity, FamousCityListDto>().ReverseMap();
             CreateMap<FamousCity, FamousCityCreateDto>().ReverseMap();
+            CreateMap<FamousCity, FamousCityEditDto>().ReverseMap().ForAllMembers(m => m.Condition((src, desc, obj) => obj != null));
+
 
 
         }
