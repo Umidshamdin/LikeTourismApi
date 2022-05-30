@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Api.Controllers
 {
-    
+    [ApiController]
+    [Route("api/[controller]")]
     public class FamousCityController : ControllerBase
     {
         private readonly IFamousCityService _service;
@@ -26,6 +27,15 @@ namespace Api.Controllers
             return Ok(await _service.GetAllAsync());
         }
 
+        [HttpGet]
+        [Route("GetById/{id}")]
+
+        public async Task<IActionResult> GetById([FromRoute] int id)
+        {
+            var result = await _service.GetAsync(id);
+            return Ok(result);
+        }
+
 
         [HttpPost]
         [Route("Create")]
@@ -41,12 +51,12 @@ namespace Api.Controllers
         public async Task<IActionResult> Edit([FromRoute] int id,[FromBody] FamousCityEditDto famousCity)
         {
             await _service.UpdateAsync(id, famousCity);
-            return Ok(famousCity);
+            return Ok();
         }
 
         [HttpDelete]
-        [Route("Delete")]
-        public async Task<IActionResult> Delete(int id)
+        [Route("Delete/{id}")]
+        public async Task<IActionResult> Delete([FromRoute]int id)
         {
             await _service.DeleteAsync(id);
             return Ok();

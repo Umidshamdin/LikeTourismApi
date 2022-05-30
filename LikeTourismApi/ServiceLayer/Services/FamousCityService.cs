@@ -35,6 +35,13 @@ namespace ServiceLayer.Services
             return _mapper.Map<List<FamousCityListDto>>(model);
         }
 
+        public async Task<FamousCityListDto> GetAsync(int id)
+        {
+            var model = await _repository.GetAsync(id);
+            var result = _mapper.Map<FamousCityListDto>(model);
+            return result;
+        }
+
         public async Task InsertAsync(FamousCityCreateDto famousCity)
         {
             await _repository.CreateAsync(_mapper.Map<FamousCity>(famousCity));

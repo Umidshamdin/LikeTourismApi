@@ -25,7 +25,7 @@ namespace ServiceLayer.Mapping
             CreateMap<Slider, SliderCreateDto>().ReverseMap();
 
 
-            CreateMap<FamousCity, FamousCityEditDto>().ReverseMap().ForAllMembers(m => m.Condition((src, desc, obj) => obj != null));
+            CreateMap<FamousCity, FamousCityEditDto>().ReverseMap();
 
 
 

@@ -9,6 +9,7 @@ namespace ServiceLayer.DTOs.FamousCity
 {
     public class FamousCityCreateDto
     {
+
         public string Name { get; set; }
 
         public byte[] Image { get; set; }

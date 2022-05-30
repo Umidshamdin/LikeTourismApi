@@ -16,5 +16,7 @@ namespace ServiceLayer.Services.Interfaces
         Task UpdateAsync(int id, FamousCityEditDto famousCity);
 
         Task DeleteAsync(int id);
+
+        Task<FamousCityListDto> GetAsync(int id);
     }
 }
