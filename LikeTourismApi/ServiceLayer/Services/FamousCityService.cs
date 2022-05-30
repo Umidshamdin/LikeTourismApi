@@ -21,6 +21,14 @@ namespace ServiceLayer.Services
             _repository = repository;
             _mapper = mapper;
         }
+
+        public async Task DeleteAsync(int id)
+        {
+            var famousCity = await _repository.GetAsync(id);
+            await _repository.DeleteAsync(famousCity);
+
+        }
+
         public async Task<List<FamousCityListDto>> GetAllAsync()
         {
             var model = await _repository.GetAllAsync();

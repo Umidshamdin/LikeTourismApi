@@ -43,5 +43,13 @@ namespace Api.Controllers
             await _service.UpdateAsync(id, famousCity);
             return Ok(famousCity);
         }
+
+        [HttpDelete]
+        [Route("Delete")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _service.DeleteAsync(id);
+            return Ok();
+        }
     }
 }

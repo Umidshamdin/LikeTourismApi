@@ -29,7 +29,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 5, 26, 19, 15, 26, 438, DateTimeKind.Local).AddTicks(6890));
+                        .HasDefaultValue(new DateTime(2022, 5, 28, 15, 32, 54, 836, DateTimeKind.Local).AddTicks(9402));
 
                     b.Property<byte[]>("Image")
                         .IsRequired()
@@ -60,7 +60,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 5, 26, 19, 15, 26, 450, DateTimeKind.Local).AddTicks(5247));
+                        .HasDefaultValue(new DateTime(2022, 5, 28, 15, 32, 54, 854, DateTimeKind.Local).AddTicks(3211));
 
                     b.Property<string>("Desc")
                         .HasMaxLength(300)
@@ -93,6 +93,41 @@ namespace RepositoryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("HotelList");
+                });
+
+            modelBuilder.Entity("DomainLayer.Entities.Slider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2022, 5, 28, 15, 32, 54, 855, DateTimeKind.Local).AddTicks(6640));
+
+                    b.Property<string>("Desc")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<byte[]>("Image")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Slider");
                 });
 #pragma warning restore 612, 618
         }
