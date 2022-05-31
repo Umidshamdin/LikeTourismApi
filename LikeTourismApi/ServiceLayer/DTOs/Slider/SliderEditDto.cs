@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ServiceLayer.DTOs.Slider
 {
-    public class SliderDto
+    public class SliderEditDto
     {
         public int Id { get; set; }
 

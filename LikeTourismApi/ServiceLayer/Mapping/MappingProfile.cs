@@ -26,6 +26,8 @@ namespace ServiceLayer.Mapping
 
 
             CreateMap<FamousCity, FamousCityEditDto>().ReverseMap();
+            CreateMap<Slider, SliderEditDto>().ReverseMap();
+
 
 
 

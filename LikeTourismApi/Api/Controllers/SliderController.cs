@@ -32,5 +32,30 @@ namespace Api.Controllers
             await _service.InsertAsync(slider);
             return Ok();
         }
+
+        [HttpGet]
+        [Route("GetById/{id}")]
+
+        public async Task<IActionResult> GetById([FromRoute] int id)
+        {
+            var result = await _service.GetAsync(id);
+            return Ok(result);
+        }
+
+        [HttpPut]
+        [Route("Edit/{id}")]
+        public async Task<IActionResult> Edit([FromRoute] int id, [FromBody] SliderEditDto slider)
+        {
+            await _service.UpdateAsync(id, slider);
+            return Ok();
+        }
+
+        [HttpDelete]
+        [Route("Delete/{id}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+            await _service.DeleteAsync(id);
+            return Ok();
+        }
     }
 }

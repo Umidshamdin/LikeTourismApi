@@ -11,7 +11,6 @@ namespace DomainLayer.Configurations
 {
     public class SliderConfiguration:IEntityTypeConfiguration<Slider>
     {
-
         public void Configure(EntityTypeBuilder<Slider> builder)
         {
             builder.Property(m => m.Image).IsRequired();
@@ -19,7 +18,6 @@ namespace DomainLayer.Configurations
             builder.Property(m => m.Desc).HasMaxLength(300);
             builder.Property(m => m.CreateDate).HasDefaultValue(DateTime.Now);
             builder.Property(m => m.SoftDelete).HasDefaultValue(false);
-
         }
     }
 }
