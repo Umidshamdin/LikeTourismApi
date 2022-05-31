@@ -10,5 +10,6 @@
     "\\LikeTourismApi\\ServiceLayer\\Mapping",
     "\\LikeTourismApi\\ServiceLayer\\Services"
   ],
+  "SelectedNode": "\\LikeTourismApi\\ServiceLayer\\DTOs\\FamousCity\\FamousCityEditDto.cs",
   "PreviewInSolutionExplorer": false
 }
