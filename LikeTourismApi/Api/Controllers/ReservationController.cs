@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ServiceLayer.DTOs.Reservation;
 using ServiceLayer.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,14 @@ namespace Api.Controllers
         public async Task<IActionResult> GetAll()
         {
             return Ok(await _service.GetAllAsync());
+        }
+
+        [HttpPost]
+        [Route("Create")]
+        public async Task<IActionResult> Create([FromBody] ReservationCreateDto slider)
+        {
+            await _service.InsertAsync(slider);
+            return Ok();
         }
     }
 }

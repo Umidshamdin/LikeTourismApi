@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DomainLayer.Entities;
 using RepositoryLayer.Repositories.Interfaces;
 using ServiceLayer.DTOs.Reservation;
 using ServiceLayer.Services.Interfaces;
@@ -26,6 +27,12 @@ namespace ServiceLayer.Services
             var result = await _repository.GetAllAsync();
 
             return _mapper.Map<List<ReservationDto>>(result);
+        }
+
+        public async Task InsertAsync(ReservationCreateDto reservation)
+        {
+            await _repository.CreateAsync(_mapper.Map<Reservation>(reservation));
+
         }
     }
 }
