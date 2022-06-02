@@ -20,6 +20,8 @@ namespace ServiceLayer
             services.AddScoped<IFamousCityService, FamousCityService>();
             services.AddScoped<IHotelListService, HotelListService>();
             services.AddScoped<ISliderService, SliderService>();
+            services.AddScoped<IReservationService, ReservationService>();
+
 
 
 
