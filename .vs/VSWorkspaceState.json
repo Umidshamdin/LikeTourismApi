@@ -8,8 +8,9 @@
     "\\LikeTourismApi\\ServiceLayer\\DTOs",
     "\\LikeTourismApi\\ServiceLayer\\DTOs\\FamousCity",
     "\\LikeTourismApi\\ServiceLayer\\Mapping",
-    "\\LikeTourismApi\\ServiceLayer\\Services"
+    "\\LikeTourismApi\\ServiceLayer\\Services",
+    "\\LikeTourismApi\\ServiceLayer\\Services\\Interfaces"
   ],
-  "SelectedNode": "\\LikeTourismApi\\ServiceLayer\\DTOs\\FamousCity\\FamousCityEditDto.cs",
+  "SelectedNode": "\\LikeTourismApi\\LikeTourismApi.sln",
   "PreviewInSolutionExplorer": false
 }

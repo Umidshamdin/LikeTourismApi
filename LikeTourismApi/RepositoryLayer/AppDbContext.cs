@@ -19,6 +19,9 @@ namespace RepositoryLayer
             modelBuilder.ApplyConfiguration(new FamousCityConfiguration());
             modelBuilder.ApplyConfiguration(new HotelListConfiguration());
             modelBuilder.ApplyConfiguration(new SliderConfiguration());
+            modelBuilder.ApplyConfiguration(new ReservationConfiguration());
+
+
 
 
             base.OnModelCreating(modelBuilder);
