@@ -23,9 +23,9 @@ namespace ServiceLayer.Services
             _repository = repository;
             _mapper = mapper;
         }
-        public async Task<List<HotelListDto>> GetAllAsync()
+        public async Task<List<HotelListDto>> GetAllAsync(int id)
         {
-            var result = await _repository.GetAllAsync();
+            var result = await _repository.FindAsync(m => m.FamousCityId == id);
 
             return _mapper.Map<List<HotelListDto>>(result);
         }

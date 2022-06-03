@@ -11,6 +11,6 @@
     "\\LikeTourismApi\\ServiceLayer\\Services",
     "\\LikeTourismApi\\ServiceLayer\\Services\\Interfaces"
   ],
-  "SelectedNode": "\\LikeTourismApi\\LikeTourismApi.sln",
+  "SelectedNode": "\\LikeTourismApi\\ServiceLayer\\Mapping\\MappingProfile.cs",
   "PreviewInSolutionExplorer": false
 }

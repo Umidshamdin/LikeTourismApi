@@ -17,6 +17,7 @@ namespace DomainLayer.Configurations
             builder.Property(m => m.Image).IsRequired();
             builder.Property(m => m.CreateDate).HasDefaultValue(DateTime.Now);
             builder.Property(m => m.SoftDelete).HasDefaultValue(false);
+
         }
     }
 }

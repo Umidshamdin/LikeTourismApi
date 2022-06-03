@@ -15,6 +15,10 @@ namespace ServiceLayer.DTOs.HotelList
         public string Desc { get; set; }
         public int Rating { get; set; }
         public int Prise { get; set; }
+
+        public int FamousCityId { get; set; }
+
+        
     }
     public class HotelListCreateValidator : AbstractValidator<HotelListCreateDto>
     {
@@ -26,7 +30,6 @@ namespace ServiceLayer.DTOs.HotelList
             RuleFor(m => m.Desc).NotEmpty().WithMessage("Pleace add description");
             RuleFor(m => m.Rating).NotEmpty().WithMessage("Pleace add rating");
             RuleFor(m => m.Prise).NotEmpty().WithMessage("Pleace add price");
-
 
         }
     }

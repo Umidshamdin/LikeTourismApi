@@ -14,5 +14,7 @@ namespace ServiceLayer.DTOs.HotelList
         public string Desc { get; set; }
         public int Rating { get; set; }
         public int Prise { get; set; }
+        public int FamousCityId { get; set; }
+
     }
 }

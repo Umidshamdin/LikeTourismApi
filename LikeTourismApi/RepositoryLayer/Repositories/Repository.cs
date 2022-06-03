@@ -33,9 +33,10 @@ namespace RepositoryLayer.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<T> FindAsync(Expression<Func<T, bool>> predicate)
+        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
         {
-            return await entities.FindAsync(predicate);
+            IEnumerable<T> datas = await entities.Where(predicate).ToListAsync();
+            return datas;
         }
 
         public async Task<T> GetAsync(int id)
