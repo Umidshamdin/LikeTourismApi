@@ -15,7 +15,6 @@ namespace DomainLayer.Configurations
         {
             builder.Property(m => m.Image).IsRequired();
             builder.Property(m => m.Name).IsRequired().HasMaxLength(100);
-            builder.Property(m => m.CityName).IsRequired();
             builder.Property(m => m.Prise).IsRequired();
             builder.Property(m => m.Rating).IsRequired();
             builder.Property(m => m.RatingCommit);

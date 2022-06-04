@@ -2,6 +2,7 @@
 using DomainLayer.Entities;
 using ServiceLayer.DTOs.FamousCity;
 using ServiceLayer.DTOs.HotelList;
+using ServiceLayer.DTOs.House;
 using ServiceLayer.DTOs.Reservation;
 using ServiceLayer.DTOs.Slider;
 using System;
@@ -20,6 +21,8 @@ namespace ServiceLayer.Mapping
             CreateMap<HotelList, HotelListDto>().ReverseMap();
             CreateMap<Slider, SliderDto>().ReverseMap();
             CreateMap<Reservation, ReservationDto>().ReverseMap();
+            CreateMap<House, HouseListDto>().ReverseMap();
+
 
 
 
