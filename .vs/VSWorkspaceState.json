@@ -7,10 +7,11 @@
     "\\LikeTourismApi\\ServiceLayer",
     "\\LikeTourismApi\\ServiceLayer\\DTOs",
     "\\LikeTourismApi\\ServiceLayer\\DTOs\\FamousCity",
+    "\\LikeTourismApi\\ServiceLayer\\DTOs\\HotelList",
     "\\LikeTourismApi\\ServiceLayer\\Mapping",
     "\\LikeTourismApi\\ServiceLayer\\Services",
     "\\LikeTourismApi\\ServiceLayer\\Services\\Interfaces"
   ],
-  "SelectedNode": "\\LikeTourismApi\\ServiceLayer\\Mapping\\MappingProfile.cs",
+  "SelectedNode": "\\LikeTourismApi\\ServiceLayer\\DTOs\\HotelList\\HotelListDto.cs",
   "PreviewInSolutionExplorer": false
 }
