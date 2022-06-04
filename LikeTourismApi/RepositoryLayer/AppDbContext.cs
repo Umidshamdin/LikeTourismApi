@@ -20,8 +20,7 @@ namespace RepositoryLayer
             modelBuilder.ApplyConfiguration(new HotelListConfiguration());
             modelBuilder.ApplyConfiguration(new SliderConfiguration());
             modelBuilder.ApplyConfiguration(new ReservationConfiguration());
-
-
+            modelBuilder.ApplyConfiguration(new HouseConfiguration());
 
 
             base.OnModelCreating(modelBuilder);
