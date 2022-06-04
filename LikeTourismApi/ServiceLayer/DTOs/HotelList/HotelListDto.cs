@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceLayer.DTOs.FamousCity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace ServiceLayer.DTOs.HotelList
         public int Rating { get; set; }
         public int Prise { get; set; }
         public int FamousCityId { get; set; }
+        public FamousCityDto FamousCityDto { get; set; }
 
     }
 }

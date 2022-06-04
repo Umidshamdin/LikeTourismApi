@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ServiceLayer.DTOs.House;
 using ServiceLayer.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,16 @@ namespace Api.Controllers
         [Route("GetAll")]
         public async Task<IActionResult> GetAll()
         {
-            return Ok(await _service.GetAllAsync());
+            var res = await _service.GetAllAsync();
+            return Ok(res);
+        }
+
+        [HttpPost]
+        [Route("Create")]
+        public async Task<IActionResult> Create([FromBody] HouseCreateDto house)
+        {
+            await _service.InsertAsync(house);
+            return Ok();
         }
     }
 }

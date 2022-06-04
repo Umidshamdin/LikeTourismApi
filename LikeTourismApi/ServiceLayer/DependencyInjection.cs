@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using ServiceLayer.DTOs.FamousCity;
 using ServiceLayer.DTOs.HotelList;
+using ServiceLayer.DTOs.House;
 using ServiceLayer.DTOs.Reservation;
 using ServiceLayer.DTOs.Slider;
 using ServiceLayer.Services;
@@ -31,6 +32,8 @@ namespace ServiceLayer
             services.AddTransient<IValidator<FamousCityCreateDto>, FamousCityCreateValidator>();
             services.AddTransient<IValidator<SliderCreateDto>, SliderCreateValidator>();
             services.AddTransient<IValidator<ReservationCreateDto>, ReservationCreateValidator>();
+            services.AddTransient<IValidator<HouseCreateDto>, HouseCreateValidator>();
+
 
 
 

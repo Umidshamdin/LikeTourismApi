@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DomainLayer.Entities;
 using RepositoryLayer.Repositories.Interfaces;
 using ServiceLayer.DTOs.House;
 using ServiceLayer.Services.Interfaces;
@@ -23,9 +24,14 @@ namespace ServiceLayer.Services
         }
         public async Task<List<HouseListDto>> GetAllAsync()
         {
-            var result = await _repository.GetAllAsync();
-
+            var result = await _repository.GetAllHouseAsync();
             return _mapper.Map<List<HouseListDto>>(result);
+        }
+
+        public async Task InsertAsync(HouseCreateDto house)
+        {
+            await _repository.CreateAsync(_mapper.Map<House>(house));
+
         }
     }
 }

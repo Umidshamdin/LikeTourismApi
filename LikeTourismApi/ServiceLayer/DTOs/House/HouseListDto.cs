@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceLayer.DTOs.FamousCity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace ServiceLayer.DTOs.House
         public float Rating { get; set; }
         public string RatingCommit { get; set; }
         public int FamousCityId { get; set; }
+        public FamousCityDto FamousCity { get; set; }
 
     }
 }

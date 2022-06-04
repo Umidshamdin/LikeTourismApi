@@ -10,6 +10,10 @@ namespace ServiceLayer.Services.Interfaces
     public interface IHouseService
     {
         Task<List<HouseListDto>> GetAllAsync();
+        Task InsertAsync(HouseCreateDto house);
+
+
+
 
     }
 }
