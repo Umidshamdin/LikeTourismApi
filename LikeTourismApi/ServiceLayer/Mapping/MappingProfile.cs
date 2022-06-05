@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DomainLayer.Entities;
+using ServiceLayer.DTOs.Category;
 using ServiceLayer.DTOs.FamousCity;
 using ServiceLayer.DTOs.HotelList;
 using ServiceLayer.DTOs.House;
@@ -22,6 +23,8 @@ namespace ServiceLayer.Mapping
             CreateMap<Slider, SliderDto>().ReverseMap();
             CreateMap<Reservation, ReservationDto>().ReverseMap();
             CreateMap<House, HouseListDto>().ReverseMap();
+            CreateMap<Category, CategoryDto>().ReverseMap();
+
 
 
 
