@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using ServiceLayer.DTOs.Category;
 using ServiceLayer.DTOs.FamousCity;
 using ServiceLayer.DTOs.HotelList;
 using ServiceLayer.DTOs.House;
@@ -35,6 +36,8 @@ namespace ServiceLayer
             services.AddTransient<IValidator<SliderCreateDto>, SliderCreateValidator>();
             services.AddTransient<IValidator<ReservationCreateDto>, ReservationCreateValidator>();
             services.AddTransient<IValidator<HouseCreateDto>, HouseCreateValidator>();
+            services.AddTransient<IValidator<CategoryCreateDto>, CategoryCreateValidator>();
+
 
 
 

@@ -10,5 +10,8 @@ namespace ServiceLayer.Services.Interfaces
     public interface ICategoryService
     {
         Task<List<CategoryDto>> GetAllAsync();
+
+        Task InsertAsync(CategoryCreateDto category);
+
     }
 }
