@@ -13,7 +13,10 @@ namespace DomainLayer.Configurations
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            throw new NotImplementedException();
+            builder.Property(m => m.Image).IsRequired();
+            builder.Property(m => m.Name).IsRequired();
+            builder.Property(m => m.CreateDate).HasDefaultValue(DateTime.Now);
+            builder.Property(m => m.SoftDelete).HasDefaultValue(false);
         }
     }
 }
