@@ -29,6 +29,13 @@ namespace ServiceLayer.Services
             return _mapper.Map<List<ReservationDto>>(result);
         }
 
+        public async Task<ReservationDto> GetAsync(int id)
+        {
+            var model = await _repository.GetAsync(id);
+            var result = _mapper.Map<ReservationDto>(model);
+            return result;
+        }
+
         public async Task InsertAsync(ReservationCreateDto reservation)
         {
             await _repository.CreateAsync(_mapper.Map<Reservation>(reservation));

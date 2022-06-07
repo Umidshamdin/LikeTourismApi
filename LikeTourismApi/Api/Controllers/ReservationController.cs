@@ -32,5 +32,15 @@ namespace Api.Controllers
             await _service.InsertAsync(slider);
             return Ok();
         }
+
+
+        [HttpGet]
+        [Route("GetById/{id}")]
+
+        public async Task<IActionResult> GetById([FromRoute] int id)
+        {
+            var result = await _service.GetAsync(id);
+            return Ok(result);
+        }
     }
 }

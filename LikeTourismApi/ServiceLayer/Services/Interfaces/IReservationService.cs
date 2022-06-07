@@ -12,6 +12,8 @@ namespace ServiceLayer.Services.Interfaces
         Task<List<ReservationDto>> GetAllAsync();
 
         Task InsertAsync(ReservationCreateDto reservation);
+        Task<ReservationDto> GetAsync(int id);
+
 
 
 

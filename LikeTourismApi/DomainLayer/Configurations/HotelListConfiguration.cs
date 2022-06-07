@@ -18,6 +18,8 @@ namespace DomainLayer.Configurations
             builder.Property(m => m.Distance).IsRequired();
             builder.Property(m => m.Desc).HasMaxLength(300);
             builder.Property(m => m.Rating).IsRequired();
+            builder.Property(m => m.Star).IsRequired();
+
             builder.Property(m => m.Prise).IsRequired();
             builder.Property(m => m.CreateDate).HasDefaultValue(DateTime.Now);
             builder.Property(m => m.SoftDelete).HasDefaultValue(false);

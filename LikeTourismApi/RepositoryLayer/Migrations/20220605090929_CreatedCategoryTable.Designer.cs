@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RepositoryLayer;
 
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220605090929_CreatedCategoryTable")]
+    partial class CreatedCategoryTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,7 +31,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 6, 16, 51, 57, 632, DateTimeKind.Local).AddTicks(6179));
+                        .HasDefaultValue(new DateTime(2022, 6, 5, 13, 9, 29, 677, DateTimeKind.Local).AddTicks(1929));
 
                     b.Property<byte[]>("Image")
                         .IsRequired()
@@ -59,7 +61,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 6, 16, 51, 57, 604, DateTimeKind.Local).AddTicks(5530));
+                        .HasDefaultValue(new DateTime(2022, 6, 5, 13, 9, 29, 657, DateTimeKind.Local).AddTicks(1825));
 
                     b.Property<byte[]>("Image")
                         .IsRequired()
@@ -90,7 +92,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 6, 16, 51, 57, 619, DateTimeKind.Local).AddTicks(1448));
+                        .HasDefaultValue(new DateTime(2022, 6, 5, 13, 9, 29, 668, DateTimeKind.Local).AddTicks(3739));
 
                     b.Property<string>("Desc")
                         .HasMaxLength(300)
@@ -123,9 +125,6 @@ namespace RepositoryLayer.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
-                    b.Property<int>("Star")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("FamousCityId");
@@ -143,7 +142,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 6, 16, 51, 57, 629, DateTimeKind.Local).AddTicks(7403));
+                        .HasDefaultValue(new DateTime(2022, 6, 5, 13, 9, 29, 675, DateTimeKind.Local).AddTicks(6481));
 
                     b.Property<int>("FamousCityId")
                         .HasColumnType("int");
@@ -192,7 +191,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 6, 16, 51, 57, 624, DateTimeKind.Local).AddTicks(4673));
+                        .HasDefaultValue(new DateTime(2022, 6, 5, 13, 9, 29, 671, DateTimeKind.Local).AddTicks(4224));
 
                     b.Property<int>("RoomPrise")
                         .HasColumnType("int");
@@ -221,7 +220,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 6, 16, 51, 57, 621, DateTimeKind.Local).AddTicks(8686));
+                        .HasDefaultValue(new DateTime(2022, 6, 5, 13, 9, 29, 669, DateTimeKind.Local).AddTicks(7940));
 
                     b.Property<string>("Desc")
                         .HasMaxLength(300)

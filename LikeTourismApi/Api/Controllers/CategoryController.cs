@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ServiceLayer.DTOs.Category;
 using ServiceLayer.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,14 @@ namespace Api.Controllers
         public async Task<IActionResult> GetAll()
         {
             return Ok(await _service.GetAllAsync());
+        }
+
+        [HttpPost]
+        [Route("Create")]
+        public async Task<IActionResult> Create([FromBody] CategoryCreateDto category)
+        {
+            await _service.InsertAsync(category);
+            return Ok();
         }
 
     }
