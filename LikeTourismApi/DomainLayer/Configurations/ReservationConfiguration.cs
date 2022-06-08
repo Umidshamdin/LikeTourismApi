@@ -15,6 +15,8 @@ namespace DomainLayer.Configurations
         {
 
             builder.Property(m => m.RoomType).IsRequired();
+            builder.Property(m => m.Image).IsRequired();
+
             builder.Property(m => m.RoomPrise).IsRequired();
             builder.Property(m => m.Breakfast).IsRequired();
             builder.Property(m => m.CreateDate).HasDefaultValue(DateTime.Now);

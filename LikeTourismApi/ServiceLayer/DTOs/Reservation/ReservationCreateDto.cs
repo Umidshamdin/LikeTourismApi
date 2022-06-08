@@ -12,6 +12,8 @@ namespace ServiceLayer.DTOs.Reservation
         public string RoomType { get; set; }
         public int RoomPrise { get; set; }
         public string Breakfast { get; set; }
+        public byte[] Image { get; set; }
+
     }
     public class ReservationCreateValidator : AbstractValidator<ReservationCreateDto>
     {
