@@ -2,12 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\LikeTourismApi",
-    "\\LikeTourismApi\\Api",
-    "\\LikeTourismApi\\Api\\Controllers",
     "\\LikeTourismApi\\ServiceLayer",
     "\\LikeTourismApi\\ServiceLayer\\DTOs",
     "\\LikeTourismApi\\ServiceLayer\\DTOs\\FamousCity",
     "\\LikeTourismApi\\ServiceLayer\\DTOs\\HotelList",
+    "\\LikeTourismApi\\ServiceLayer\\DTOs\\Reservation",
     "\\LikeTourismApi\\ServiceLayer\\Mapping",
     "\\LikeTourismApi\\ServiceLayer\\Services",
     "\\LikeTourismApi\\ServiceLayer\\Services\\Interfaces"

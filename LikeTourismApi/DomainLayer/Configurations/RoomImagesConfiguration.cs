@@ -9,16 +9,11 @@ using System.Threading.Tasks;
 
 namespace DomainLayer.Configurations
 {
-    public class ReservationConfiguration : IEntityTypeConfiguration<Reservation>
+    public class RoomImagesConfiguration : IEntityTypeConfiguration<RoomImages>
     {
-        public void Configure(EntityTypeBuilder<Reservation> builder)
+        public void Configure(EntityTypeBuilder<RoomImages> builder)
         {
-
-            builder.Property(m => m.RoomType).IsRequired();
             builder.Property(m => m.Image).IsRequired();
-
-            builder.Property(m => m.RoomPrise).IsRequired();
-            builder.Property(m => m.Remained).IsRequired();
             builder.Property(m => m.CreateDate).HasDefaultValue(DateTime.Now);
             builder.Property(m => m.SoftDelete).HasDefaultValue(false);
         }

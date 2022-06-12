@@ -7,13 +7,8 @@ using System.Threading.Tasks;
 
 namespace DomainLayer.Entities
 {
-    public class Reservation:BaseEntity
+    public class RoomImages:BaseEntity
     {
-
         public byte[] Image { get; set; }
-        public string RoomType { get; set; }
-        public int RoomPrise { get; set; }
-        public int Remained { get; set; }
-
     }
 }

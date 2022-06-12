@@ -11,8 +11,10 @@ namespace ServiceLayer.DTOs.Reservation
     {
         public string RoomType { get; set; }
         public int RoomPrise { get; set; }
-        public string Breakfast { get; set; }
+       
         public byte[] Image { get; set; }
+        public int Remained { get; set; }
+
 
     }
     public class ReservationCreateValidator : AbstractValidator<ReservationCreateDto>
@@ -20,10 +22,8 @@ namespace ServiceLayer.DTOs.Reservation
         public ReservationCreateValidator()
         {
             RuleFor(m => m.RoomType).NotEmpty().WithMessage("Pleace add Title").MinimumLength(4);
-           
-
             RuleFor(m => m.RoomPrise).NotEmpty().WithMessage("Pleace add prise");
-            RuleFor(m => m.Breakfast).NotEmpty().WithMessage("Pleace add breakfast");
+            RuleFor(m => m.Remained).NotEmpty().WithMessage("Pleace add breakfast");
 
         }
     }
