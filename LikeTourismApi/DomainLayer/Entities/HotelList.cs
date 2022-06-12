@@ -19,5 +19,12 @@ namespace DomainLayer.Entities
         public int FamousCityId { get; set; }
         public FamousCity FamousCity { get; set; }
 
+        public List<Reservation> Reservations { get; set; }
+
+
+
+
+
+
     }
 }

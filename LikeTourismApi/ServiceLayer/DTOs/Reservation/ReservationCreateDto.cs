@@ -14,6 +14,8 @@ namespace ServiceLayer.DTOs.Reservation
        
         public byte[] Image { get; set; }
         public int Remained { get; set; }
+        public int HotelListId { get; set; }
+
 
 
     }

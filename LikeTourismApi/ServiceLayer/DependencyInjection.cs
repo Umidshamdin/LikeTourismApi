@@ -5,6 +5,7 @@ using ServiceLayer.DTOs.FamousCity;
 using ServiceLayer.DTOs.HotelList;
 using ServiceLayer.DTOs.House;
 using ServiceLayer.DTOs.Reservation;
+using ServiceLayer.DTOs.RoomImages;
 using ServiceLayer.DTOs.Slider;
 using ServiceLayer.Services;
 using ServiceLayer.Services.Interfaces;
@@ -26,6 +27,8 @@ namespace ServiceLayer
             services.AddScoped<IReservationService, ReservationService>();
             services.AddScoped<IHouseService, HouseService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IRoomImagesService, RoomImagesService>();
+
 
 
 
@@ -37,6 +40,8 @@ namespace ServiceLayer
             services.AddTransient<IValidator<ReservationCreateDto>, ReservationCreateValidator>();
             services.AddTransient<IValidator<HouseCreateDto>, HouseCreateValidator>();
             services.AddTransient<IValidator<CategoryCreateDto>, CategoryCreateValidator>();
+            services.AddTransient<IValidator<CreateRoomImageDto>, RoomImagesCreateValidator>();
+
 
 
 

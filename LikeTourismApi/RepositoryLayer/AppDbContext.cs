@@ -22,6 +22,8 @@ namespace RepositoryLayer
             modelBuilder.ApplyConfiguration(new ReservationConfiguration());
             modelBuilder.ApplyConfiguration(new HouseConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new RoomImagesConfiguration());
+
 
 
             base.OnModelCreating(modelBuilder);
