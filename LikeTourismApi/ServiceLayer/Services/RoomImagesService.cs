@@ -27,6 +27,14 @@ namespace ServiceLayer.Services
 
             return _mapper.Map<List<RoomImagesDto>>(result);
         }
+
+        public async Task<RoomImagesDto> GetAsync(int id)
+        {
+            var model = await _repository.GetAsync(id);
+            var result = _mapper.Map<RoomImagesDto>(model);
+            return result;
+        }
+
         public async Task InsertAsync(CreateRoomImageDto roomImageDto)
         {
             await _repository.CreateAsync(_mapper.Map<RoomImages>(roomImageDto));

@@ -10,7 +10,10 @@ namespace ServiceLayer.Services.Interfaces
     public interface IRoomImagesService
     {
         Task<List<RoomImagesDto>> GetAllAsync();
-        Task InsertAsync(CreateRoomImageDto slider);
+        Task InsertAsync(CreateRoomImageDto roomImageDto);
+
+        Task<RoomImagesDto> GetAsync(int id);
+
 
 
     }
