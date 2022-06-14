@@ -20,6 +20,10 @@ namespace DomainLayer.Entities
         public FamousCity FamousCity { get; set; }
 
         public List<Reservation> Reservations { get; set; }
+        public List<HotelListImages> HotelListImages { get; set; }
+
+
+
 
 
 

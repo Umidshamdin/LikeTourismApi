@@ -3,6 +3,7 @@ using DomainLayer.Entities;
 using ServiceLayer.DTOs.Category;
 using ServiceLayer.DTOs.FamousCity;
 using ServiceLayer.DTOs.HotelList;
+using ServiceLayer.DTOs.HotelListImages;
 using ServiceLayer.DTOs.House;
 using ServiceLayer.DTOs.Reservation;
 using ServiceLayer.DTOs.RoomImages;
@@ -26,6 +27,8 @@ namespace ServiceLayer.Mapping
             CreateMap<House, HouseListDto>().ReverseMap();
             CreateMap<Category, CategoryDto>().ReverseMap();
             CreateMap<RoomImages, RoomImagesDto>().ReverseMap();
+            CreateMap<HotelListImages, HotelListImagesDto>().ReverseMap();
+
 
 
 
@@ -40,6 +43,8 @@ namespace ServiceLayer.Mapping
             CreateMap<House, HouseCreateDto>().ReverseMap();
             CreateMap<Category, CategoryCreateDto>().ReverseMap();
             CreateMap<RoomImages, CreateRoomImageDto>().ReverseMap();
+            CreateMap<HotelListImages, CreateHotelListImagesDto>().ReverseMap();
+
 
 
 
