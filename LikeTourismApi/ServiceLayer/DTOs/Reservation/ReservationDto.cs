@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ServiceLayer.DTOs.HotelList;
+using ServiceLayer.DTOs.RoomImages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,20 @@ namespace ServiceLayer.DTOs.Reservation
         public string RoomType { get; set; }
         public int RoomPrise { get; set; }
         public int Remained { get; set; }
+        public List<RoomImagesDto> RoomImages { get; set; }
+        public int HotelListId { get; set; }
+
+        public HotelListDto HotelListDto { get; set; }
+
+
+
+
+
+
+
+
+
+
 
 
     }

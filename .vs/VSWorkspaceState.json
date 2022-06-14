@@ -11,6 +11,6 @@
     "\\LikeTourismApi\\ServiceLayer\\Services",
     "\\LikeTourismApi\\ServiceLayer\\Services\\Interfaces"
   ],
-  "SelectedNode": "\\LikeTourismApi\\LikeTourismApi.sln",
+  "SelectedNode": "\\LikeTourismApi\\ServiceLayer\\DTOs\\Reservation\\ReservationDto.cs",
   "PreviewInSolutionExplorer": false
 }

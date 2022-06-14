@@ -19,10 +19,10 @@ namespace Api.Controllers
             _service = service;
         }
         [HttpGet]
-        [Route("GetAll")]
-        public async Task<IActionResult> GetAll()
+        [Route("GetAll/{id}")]
+        public async Task<IActionResult> GetAll([FromRoute] int id)
         {
-            return Ok(await _service.GetAllAsync());
+            return Ok(await _service.GetAllAsync(id));
         }
 
         [HttpPost]
@@ -36,7 +36,6 @@ namespace Api.Controllers
 
         [HttpGet]
         [Route("GetById/{id}")]
-
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var result = await _service.GetAsync(id);

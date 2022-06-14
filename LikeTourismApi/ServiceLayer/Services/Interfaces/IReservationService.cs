@@ -9,7 +9,7 @@ namespace ServiceLayer.Services.Interfaces
 {
     public interface IReservationService
     {
-        Task<List<ReservationDto>> GetAllAsync();
+        Task<List<ReservationDto>> GetAllAsync(int id);
 
         Task InsertAsync(ReservationCreateDto reservation);
         Task<ReservationDto> GetAsync(int id);
