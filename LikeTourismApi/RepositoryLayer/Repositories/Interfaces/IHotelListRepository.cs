@@ -9,5 +9,9 @@ namespace RepositoryLayer.Repositories.Interfaces
 {
     public interface IHotelListRepository:IRepository<HotelList>
     {
+        Task<HotelList> GetHotelListAsync(int id);
+
+
+
     }
 }

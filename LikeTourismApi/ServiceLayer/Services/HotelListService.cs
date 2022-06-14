@@ -29,6 +29,12 @@ namespace ServiceLayer.Services
 
             return _mapper.Map<List<HotelListDto>>(result);
         }
+        public async Task<HotelListDto> GetAsync(int id)
+        {
+            var model = await _repository.GetHotelListAsync(id);
+            var result = _mapper.Map<HotelListDto>(model);
+            return result;
+        }
 
         public async Task InsertAsync(HotelListCreateDto hotelList)
         {
