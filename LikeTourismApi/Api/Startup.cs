@@ -43,8 +43,8 @@ namespace Api
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
             services.AddAutoMapper(typeof(MappingProfile));
-            
-           
+
+
 
             services.AddRepositoryLayer();
             services.AddServiceLayer();

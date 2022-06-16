@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using DomainLayer.Entities;
+using ServiceLayer.DTOs.AppUser;
 using ServiceLayer.DTOs.Category;
 using ServiceLayer.DTOs.FamousCity;
+using ServiceLayer.DTOs.HotelDescription;
 using ServiceLayer.DTOs.HotelList;
 using ServiceLayer.DTOs.HotelListImages;
 using ServiceLayer.DTOs.House;
@@ -28,6 +30,8 @@ namespace ServiceLayer.Mapping
             CreateMap<Category, CategoryDto>().ReverseMap();
             CreateMap<RoomImages, RoomImagesDto>().ReverseMap();
             CreateMap<HotelListImages, HotelListImagesDto>().ReverseMap();
+            CreateMap<HotelDescription, HotelDescriptionDto>().ReverseMap();
+
 
 
 
@@ -44,6 +48,10 @@ namespace ServiceLayer.Mapping
             CreateMap<Category, CategoryCreateDto>().ReverseMap();
             CreateMap<RoomImages, CreateRoomImageDto>().ReverseMap();
             CreateMap<HotelListImages, CreateHotelListImagesDto>().ReverseMap();
+            CreateMap<HotelDescription, HotelDescriptionCreateDto>().ReverseMap();
+
+            
+
 
 
 
@@ -53,6 +61,8 @@ namespace ServiceLayer.Mapping
 
             CreateMap<FamousCity, FamousCityEditDto>().ReverseMap();
             CreateMap<Slider, SliderEditDto>().ReverseMap();
+            CreateMap<HotelList, HotelListEditDto>().ReverseMap();
+
 
 
 

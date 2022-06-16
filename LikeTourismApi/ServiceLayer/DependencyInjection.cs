@@ -30,6 +30,9 @@ namespace ServiceLayer
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IRoomImagesService, RoomImagesService>();
             services.AddScoped<IHotelListImagesService, HotelListImagesService>();
+            services.AddScoped<IHotelDescriptionService, HotelDescriptionService>();
+         
+
 
 
 
@@ -45,9 +48,6 @@ namespace ServiceLayer
             services.AddTransient<IValidator<CategoryCreateDto>, CategoryCreateValidator>();
             services.AddTransient<IValidator<CreateRoomImageDto>, RoomImagesCreateValidator>();
             services.AddTransient<IValidator<CreateHotelListImagesDto>, HotelListImagesCreateValidator>();
-
-
-
             services.AddTransient<IValidator<HotelListCreateDto>, HotelListCreateValidator>();
 
             return services;

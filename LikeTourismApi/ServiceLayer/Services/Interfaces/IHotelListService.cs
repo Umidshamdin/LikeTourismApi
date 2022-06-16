@@ -14,6 +14,11 @@ namespace ServiceLayer.Services.Interfaces
         Task InsertAsync(HotelListCreateDto hotelList);
 
         Task<HotelListDto> GetAsync(int id);
+        Task UpdateAsync(int id, HotelListEditDto hotelList);
+
+        Task DeleteAsync(int id);
+
+
 
 
 

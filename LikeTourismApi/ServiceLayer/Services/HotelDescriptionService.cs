@@ -1,0 +1,46 @@
+﻿using AutoMapper;
+using DomainLayer.Entities;
+using RepositoryLayer.Repositories.Interfaces;
+using ServiceLayer.DTOs.HotelDescription;
+using ServiceLayer.Services.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ServiceLayer.Services
+{
+    public class HotelDescriptionService : IHotelDescriptionService
+    {
+
+        private readonly IHotelDescriptionRepository _repository;
+        private readonly IMapper _mapper;
+
+        public HotelDescriptionService(IHotelDescriptionRepository repository, IMapper mapper)
+        {
+            _repository = repository;
+            _mapper = mapper;
+        }
+
+        public async Task<List<HotelDescriptionDto>> GetAllAsync(int id)
+        {
+            var result = await _repository.FindAsync(m => m.HotelListId == id);
+
+            return _mapper.Map<List<HotelDescriptionDto>>(result);
+        }
+
+        public async Task<HotelDescriptionDto> GetAsync(int id)
+        {
+            var model = await _repository.GetAsync(id);
+            var result = _mapper.Map<HotelDescriptionDto>(model);
+            return result;
+        }
+
+        public async Task InsertAsync(HotelDescriptionCreateDto hotelDescription)
+        {
+            await _repository.CreateAsync(_mapper.Map<HotelDescription>(hotelDescription));
+
+        }
+    }
+}

@@ -28,14 +28,14 @@ namespace RepositoryLayer.Repositories
 
         public async Task DeleteAsync(T entity)
         {
-            if (entity is null) throw new ArgumentNullException(nameof(entity));
+            if (entity is null) throw new ArgumentNullException();
             entity.SoftDelete = true;
             await _context.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
         {
-            IEnumerable<T> datas = await entities.Where(predicate).ToListAsync();
+            IEnumerable<T> datas = await entities.Where(predicate).Where(m=> m.SoftDelete==false).ToListAsync();
             return datas;
         }
 
@@ -48,13 +48,13 @@ namespace RepositoryLayer.Repositories
 
         public async Task<List<T>> GetAllAsync()
         {
-            return await entities.Where(m=>m.SoftDelete==false).ToListAsync();
+            return await entities.Where(m=> m.SoftDelete==false).ToListAsync();
         }
 
         public async Task SoftDeleteAsync(T entity)
         {
             T entityDb = await entities.FirstOrDefaultAsync(m => m.Id == entity.Id);
-            if (entity is null) throw new ArgumentNullException(nameof(entityDb));
+            if (entity is null) throw new ArgumentNullException();
             entityDb.SoftDelete = true;
             await _context.SaveChangesAsync();
         }

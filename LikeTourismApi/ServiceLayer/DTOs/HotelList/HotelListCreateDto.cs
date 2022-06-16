@@ -14,6 +14,8 @@ namespace ServiceLayer.DTOs.HotelList
         public string Distance { get; set; }
         public string Desc { get; set; }
         public int Rating { get; set; }
+        public string RatingTitle { get; set; }
+
         public int Star { get; set; }
 
 
@@ -27,11 +29,15 @@ namespace ServiceLayer.DTOs.HotelList
     {
         public HotelListCreateValidator()
         {
-            RuleFor(m => m.Name).NotEmpty().WithMessage("Pleace add name").MinimumLength(4);
+            RuleFor(m => m.Name).NotEmpty().WithMessage("Pleace add name");
             RuleFor(m => m.Image).NotEmpty().WithMessage("Pleace add image");
             RuleFor(m => m.Distance).NotEmpty().WithMessage("Pleace add distance");
             RuleFor(m => m.Desc).NotEmpty().WithMessage("Pleace add description");
             RuleFor(m => m.Rating).NotEmpty().WithMessage("Pleace add rating");
+            RuleFor(m => m.RatingTitle).NotEmpty().WithMessage("Pleace add rating");
+            RuleFor(m => m.Star).NotEmpty().WithMessage("Pleace add rating");
+
+
             RuleFor(m => m.Prise).NotEmpty().WithMessage("Pleace add price");
 
         }

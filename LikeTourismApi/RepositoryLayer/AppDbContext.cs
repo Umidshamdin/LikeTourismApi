@@ -1,14 +1,11 @@
 ﻿using DomainLayer.Configurations;
+using DomainLayer.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RepositoryLayer
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
@@ -24,6 +21,8 @@ namespace RepositoryLayer
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new RoomImagesConfiguration());
             modelBuilder.ApplyConfiguration(new HotelListImagesConfiguration());
+            modelBuilder.ApplyConfiguration(new HotelDescriptionConfiguration());
+
 
 
 

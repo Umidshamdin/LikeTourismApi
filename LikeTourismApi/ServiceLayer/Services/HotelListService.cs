@@ -23,6 +23,13 @@ namespace ServiceLayer.Services
             _repository = repository;
             _mapper = mapper;
         }
+
+        public async Task DeleteAsync(int id)
+        {
+            var hotel = await _repository.GetHotelListAsync(id);
+            await _repository.DeleteAsync(hotel);
+        }
+
         public async Task<List<HotelListDto>> GetAllAsync(int id)
         {
             var result = await _repository.FindAsync(m => m.FamousCityId == id);
@@ -40,6 +47,13 @@ namespace ServiceLayer.Services
         {
             await _repository.CreateAsync(_mapper.Map<HotelList>(hotelList));
 
+        }
+
+        public async Task UpdateAsync(int id, HotelListEditDto hotelList)
+        {
+            var entity = await _repository.GetAsync(id);
+            _mapper.Map(hotelList, entity);
+            await _repository.UpdateAsync(entity);
         }
     }
 }

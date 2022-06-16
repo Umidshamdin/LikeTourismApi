@@ -9,7 +9,7 @@ namespace ServiceLayer.Services.Interfaces
 {
     public interface IHotelListImagesService
     {
-        Task<List<HotelListImagesDto>> GetAllAsync();
+        Task<List<HotelListImagesDto>> GetAllAsync(int id);
         Task InsertAsync(CreateHotelListImagesDto createHotel);
 
         Task<HotelListImagesDto> GetAsync(int id);

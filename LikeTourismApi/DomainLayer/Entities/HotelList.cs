@@ -14,6 +14,8 @@ namespace DomainLayer.Entities
         public string Distance { get; set; }
         public string Desc { get; set; }
         public int Rating { get; set; }
+        public string RatingTitle { get; set; }
+
         public int Star { get; set; }
         public int Prise { get; set; }
         public int FamousCityId { get; set; }
@@ -21,6 +23,10 @@ namespace DomainLayer.Entities
 
         public List<Reservation> Reservations { get; set; }
         public List<HotelListImages> HotelListImages { get; set; }
+        public List<HotelDescription> HotelDescriptions { get; set; }
+
+
+
 
 
 

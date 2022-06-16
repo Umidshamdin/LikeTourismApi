@@ -22,7 +22,7 @@ namespace RepositoryLayer.Repositories
         }
         public async Task<HotelList> GetHotelListAsync(int id)
         {
-            var entity = await entities.Include(m => m.HotelListImages).FirstOrDefaultAsync(m => m.Id == id);
+            var entity = await entities.Where(m => m.SoftDelete == false).Include(m => m.HotelListImages).Include(m => m.HotelDescriptions).FirstOrDefaultAsync(m => m.Id == id);
             if (entity is null) throw new NullReferenceException();
             return entity;
         }
