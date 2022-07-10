@@ -3,10 +3,7 @@ using DomainLayer.Entities;
 using RepositoryLayer.Repositories.Interfaces;
 using ServiceLayer.DTOs.HotelDescription;
 using ServiceLayer.Services.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ServiceLayer.Services
@@ -23,6 +20,12 @@ namespace ServiceLayer.Services
             _mapper = mapper;
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            var hotel = await _repository.GetDescAsync(id);
+            await _repository.DeleteAsync(hotel);
+        }
+
         public async Task<List<HotelDescriptionDto>> GetAllAsync(int id)
         {
             var result = await _repository.FindAsync(m => m.HotelListId == id);
@@ -32,7 +35,7 @@ namespace ServiceLayer.Services
 
         public async Task<HotelDescriptionDto> GetAsync(int id)
         {
-            var model = await _repository.GetAsync(id);
+            var model = await _repository.FindAsync(m => m.HotelListId == id);
             var result = _mapper.Map<HotelDescriptionDto>(model);
             return result;
         }

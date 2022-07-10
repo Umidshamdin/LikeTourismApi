@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace RepositoryLayer
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
@@ -22,8 +22,7 @@ namespace RepositoryLayer
             modelBuilder.ApplyConfiguration(new RoomImagesConfiguration());
             modelBuilder.ApplyConfiguration(new HotelListImagesConfiguration());
             modelBuilder.ApplyConfiguration(new HotelDescriptionConfiguration());
-
-
+            modelBuilder.ApplyConfiguration(new OrderConfigration());
 
 
 

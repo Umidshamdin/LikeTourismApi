@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.DTOs.FamousCity;
 using ServiceLayer.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Api.Controllers
@@ -17,7 +14,7 @@ namespace Api.Controllers
         {
             _service = service;
         }
-        
+
 
         [HttpGet]
         [Route("GetAll")]
@@ -48,7 +45,7 @@ namespace Api.Controllers
 
         [HttpPut]
         [Route("Edit/{id}")]
-        public async Task<IActionResult> Edit([FromRoute] int id,[FromBody] FamousCityEditDto famousCity)
+        public async Task<IActionResult> Edit([FromRoute] int id, [FromBody] FamousCityEditDto famousCity)
         {
             await _service.UpdateAsync(id, famousCity);
             return Ok();
@@ -56,7 +53,7 @@ namespace Api.Controllers
 
         [HttpDelete]
         [Route("Delete/{id}")]
-        public async Task<IActionResult> Delete([FromRoute]int id)
+        public async Task<IActionResult> Delete([FromRoute] int id)
         {
             await _service.DeleteAsync(id);
             return Ok();

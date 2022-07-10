@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.DTOs.HotelDescription;
 using ServiceLayer.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Api.Controllers
@@ -41,6 +38,14 @@ namespace Api.Controllers
         {
             var result = await _service.GetAsync(id);
             return Ok(result);
+        }
+
+        [HttpDelete]
+        [Route("Delete/{id}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+            await _service.DeleteAsync(id);
+            return Ok();
         }
     }
 }

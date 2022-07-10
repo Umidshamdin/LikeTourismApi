@@ -3,10 +3,7 @@ using DomainLayer.Entities;
 using RepositoryLayer.Repositories.Interfaces;
 using ServiceLayer.DTOs.HotelList;
 using ServiceLayer.Services.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ServiceLayer.Services
@@ -14,11 +11,11 @@ namespace ServiceLayer.Services
     public class HotelListService : IHotelListService
     {
 
-        
+
         private readonly IHotelListRepository _repository;
         private readonly IMapper _mapper;
 
-        public HotelListService(IHotelListRepository repository,IMapper mapper)
+        public HotelListService(IHotelListRepository repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
@@ -32,7 +29,7 @@ namespace ServiceLayer.Services
 
         public async Task<List<HotelListDto>> GetAllAsync(int id)
         {
-            var result = await _repository.FindAsync(m => m.FamousCityId == id);
+            var result = await _repository.FindAllAsync(m => m.FamousCityId == id);
 
             return _mapper.Map<List<HotelListDto>>(result);
         }
@@ -54,6 +51,11 @@ namespace ServiceLayer.Services
             var entity = await _repository.GetAsync(id);
             _mapper.Map(hotelList, entity);
             await _repository.UpdateAsync(entity);
+        }
+
+        public async Task<IEnumerable<HotelListDto>> GetAllNameAsync(string search)
+        {
+            return _mapper.Map<IEnumerable<HotelListDto>>(await _repository.FindAllAsync(m => m.Name.Contains(search)));
         }
     }
 }

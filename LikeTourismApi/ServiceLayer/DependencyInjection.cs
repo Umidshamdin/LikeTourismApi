@@ -10,11 +10,6 @@ using ServiceLayer.DTOs.RoomImages;
 using ServiceLayer.DTOs.Slider;
 using ServiceLayer.Services;
 using ServiceLayer.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ServiceLayer
 {
@@ -31,7 +26,17 @@ namespace ServiceLayer
             services.AddScoped<IRoomImagesService, RoomImagesService>();
             services.AddScoped<IHotelListImagesService, HotelListImagesService>();
             services.AddScoped<IHotelDescriptionService, HotelDescriptionService>();
-         
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IOrderService, OrderService>();
+
+
+
+
+            services.AddHttpContextAccessor();
+
+
 
 
 

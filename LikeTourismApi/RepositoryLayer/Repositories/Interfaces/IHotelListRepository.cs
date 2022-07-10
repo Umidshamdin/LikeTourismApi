@@ -1,17 +1,11 @@
 ﻿using DomainLayer.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RepositoryLayer.Repositories.Interfaces
 {
-    public interface IHotelListRepository:IRepository<HotelList>
+    public interface IHotelListRepository : IRepository<HotelList>
     {
         Task<HotelList> GetHotelListAsync(int id);
-
-
 
     }
 }

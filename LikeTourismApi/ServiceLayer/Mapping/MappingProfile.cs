@@ -7,18 +7,14 @@ using ServiceLayer.DTOs.HotelDescription;
 using ServiceLayer.DTOs.HotelList;
 using ServiceLayer.DTOs.HotelListImages;
 using ServiceLayer.DTOs.House;
+using ServiceLayer.DTOs.Order;
 using ServiceLayer.DTOs.Reservation;
 using ServiceLayer.DTOs.RoomImages;
 using ServiceLayer.DTOs.Slider;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ServiceLayer.Mapping
 {
-    public class MappingProfile:Profile
+    public class MappingProfile : Profile
     {
         public MappingProfile()
         {
@@ -31,6 +27,14 @@ namespace ServiceLayer.Mapping
             CreateMap<RoomImages, RoomImagesDto>().ReverseMap();
             CreateMap<HotelListImages, HotelListImagesDto>().ReverseMap();
             CreateMap<HotelDescription, HotelDescriptionDto>().ReverseMap();
+            CreateMap<AppUser, RegisterDto>().ReverseMap();
+            CreateMap<Order, OrderDto>().ReverseMap();
+            CreateMap<UserDto, AppUser>().ReverseMap();
+
+
+
+
+
 
 
 
@@ -50,7 +54,7 @@ namespace ServiceLayer.Mapping
             CreateMap<HotelListImages, CreateHotelListImagesDto>().ReverseMap();
             CreateMap<HotelDescription, HotelDescriptionCreateDto>().ReverseMap();
 
-            
+
 
 
 
@@ -62,6 +66,8 @@ namespace ServiceLayer.Mapping
             CreateMap<FamousCity, FamousCityEditDto>().ReverseMap();
             CreateMap<Slider, SliderEditDto>().ReverseMap();
             CreateMap<HotelList, HotelListEditDto>().ReverseMap();
+            CreateMap<HotelListImages, HotelListImagesEditDto>().ReverseMap();
+
 
 
 
