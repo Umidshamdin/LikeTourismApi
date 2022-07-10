@@ -26,10 +26,7 @@ namespace RepositoryLayer
             modelBuilder.ApplyConfiguration(new HouseImagesConfiguration());
             modelBuilder.ApplyConfiguration(new HouseRoomConfiguration());
             modelBuilder.ApplyConfiguration(new HouseRoomImagesConfiguration());
-
-
-
-
+            modelBuilder.ApplyConfiguration(new VillaConfiguration());
 
 
             base.OnModelCreating(modelBuilder);

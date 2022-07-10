@@ -22,6 +22,8 @@ namespace RepositoryLayer
             services.AddScoped<IHouseImagesRepository, HouseImagesRepository>();
             services.AddScoped<IHouseRoomRepository, HouseRoomRepository>();
             services.AddScoped<IHouseRoomImagesRepository, HouseRoomImagesRepository>();
+            services.AddScoped<IVillaRepository, VillaRepository>();
+
 
 
 
