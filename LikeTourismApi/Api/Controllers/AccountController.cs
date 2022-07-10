@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.DTOs.AppUser;
 using ServiceLayer.Services.Interfaces;
+using System;
 using System.Threading.Tasks;
 
 
@@ -60,6 +61,47 @@ namespace Api.Controllers
             var user = await _service.GetUserByEmailAsync(email);
 
             return user;
+        }
+
+        [HttpPost]
+        [Route("ForgotPassword")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto forgotPassword)
+        {
+            var user = await _userManager.FindByEmailAsync(forgotPassword.Email);
+
+            if (user is null) throw new ArgumentNullException();
+
+            string forgotpasswordtoken = await _userManager.GeneratePasswordResetTokenAsync(user);
+            //string url = Url.Action("http://localhost:3000/", "forgotpassword", new { email = user.Email, Id = user.Id, token = forgotpasswordtoken, }, Request.Scheme);
+            string url2 = "http://localhost:3000/ResetPassword/" + user.Email + "/token=" + forgotpasswordtoken;
+            _emailService.ForgotPassword(user, url2, forgotPassword);
+
+            return Ok();
+        }
+
+        [HttpPost]
+        [Route("ResetPassword")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordDto resetPassworddto)
+        {
+
+
+            var user = await _userManager.FindByEmailAsync(resetPassworddto.Email);
+
+            if (user is null) return NotFound();
+
+            IdentityResult result = await _userManager.ResetPasswordAsync(user, resetPassworddto.Token, resetPassworddto.Password);
+
+            return Ok();
+
+        }
+
+        [HttpPut]
+        [Route("UpdateUserPassword/{email}")]
+        public async Task<IActionResult> UpdatePassword([FromRoute] string email, [FromBody] UpdatePasswordDto updatePasswordDto)
+        {
+            AppUser appUser = await _userManager.FindByEmailAsync(email);
+            await _service.UpdatePassword(appUser, updatePasswordDto);
+            return Ok();
         }
 
 

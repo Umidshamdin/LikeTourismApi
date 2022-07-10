@@ -10,3 +10,15 @@ C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\DomainLayer\obj\Debug\net5.
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\DomainLayer\obj\Debug\net5.0\DomainLayer.dll
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\DomainLayer\obj\Debug\net5.0\ref\DomainLayer.dll
 C:\Users\Umid\Desktop\Api-LikeTourism\LikeTourismApi\DomainLayer\obj\Debug\net5.0\DomainLayer.pdb
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\bin\Debug\net5.0\DomainLayer.deps.json
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\bin\Debug\net5.0\DomainLayer.dll
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\bin\Debug\net5.0\ref\DomainLayer.dll
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\bin\Debug\net5.0\DomainLayer.pdb
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\obj\Debug\net5.0\DomainLayer.csproj.AssemblyReference.cache
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\obj\Debug\net5.0\DomainLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\obj\Debug\net5.0\DomainLayer.AssemblyInfoInputs.cache
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\obj\Debug\net5.0\DomainLayer.AssemblyInfo.cs
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\obj\Debug\net5.0\DomainLayer.csproj.CoreCompileInputs.cache
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\obj\Debug\net5.0\DomainLayer.dll
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\obj\Debug\net5.0\ref\DomainLayer.dll
+C:\Users\Umid\Desktop\LikeTest\LikeTourismApi\DomainLayer\obj\Debug\net5.0\DomainLayer.pdb

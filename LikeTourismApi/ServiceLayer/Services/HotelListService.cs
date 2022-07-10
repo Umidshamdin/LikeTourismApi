@@ -23,7 +23,7 @@ namespace ServiceLayer.Services
 
         public async Task DeleteAsync(int id)
         {
-            var hotel = await _repository.GetHotelListAsync(id);
+            var hotel = await _repository.GetHotelsListAsync(id);
             await _repository.DeleteAsync(hotel);
         }
 

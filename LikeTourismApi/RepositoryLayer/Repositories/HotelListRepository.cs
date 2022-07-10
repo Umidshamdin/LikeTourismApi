@@ -25,16 +25,26 @@ namespace RepositoryLayer.Repositories
                 .Include(m => m.HotelListImages)
                 .Include(m => m.HotelDescriptions)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (entity.HotelDescriptions[0].SoftDelete == true)
             {
                 entity.HotelDescriptions[0] = null;
             }
 
-
             if (entity is null) throw new NullReferenceException();
             return entity;
         }
 
+        public async Task<HotelList> GetHotelsListAsync(int id)
+        {
+            var entity = await entities
+                .Where(m => m.SoftDelete == false)
+                .Include(m => m.HotelListImages)
+                .Include(m => m.HotelDescriptions)
+                .FirstOrDefaultAsync(m => m.Id == id);
 
+            if (entity is null) throw new NullReferenceException();
+            return entity;
+        }
     }
 }

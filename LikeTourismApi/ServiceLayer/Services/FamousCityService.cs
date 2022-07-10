@@ -39,6 +39,12 @@ namespace ServiceLayer.Services
             return result;
         }
 
+        public async Task<IEnumerable<FamousCityDto>> GetCityNameAsync(string search)
+        {
+
+            return _mapper.Map<IEnumerable<FamousCityDto>>(await _repository.FindAllAsync(m => m.Name.Contains(search)));
+        }
+
         public async Task InsertAsync(FamousCityCreateDto famousCity)
         {
             await _repository.CreateAsync(_mapper.Map<FamousCity>(famousCity));

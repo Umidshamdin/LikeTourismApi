@@ -30,7 +30,9 @@ namespace ServiceLayer.Services
         {
             var user = _mapper.Map<AppUser>(registerDto);
             await _userManager.CreateAsync(user, registerDto.Password);
-            //await _userManager.AddToRoleAsync(user, "User");
+            await _userManager.AddToRoleAsync(user, "User");
+
+
 
         }
 
@@ -59,6 +61,21 @@ namespace ServiceLayer.Services
             var appuser = await _userManager.FindByEmailAsync(email);
             var user = _mapper.Map<UserDto>(appuser);
             return user;
+        }
+
+        public async Task UpdatePassword(AppUser appUser, UpdatePasswordDto updatePasswordDto)
+        {
+            var appuse = await _userManager.FindByIdAsync(appUser.Id);
+
+
+            //var result = await _userManager.RemovePasswordAsync(appuse);
+            //result = await _userManager.AddPasswordAsync(appuse, updatePasswordDto.Password);
+
+            var result = await _userManager.ChangePasswordAsync(appuse, updatePasswordDto.CurrentPassword, updatePasswordDto.NewPassword);
+            var user = _mapper.Map(updatePasswordDto, appuse);
+            var upuser = await _userManager.UpdateAsync(user);
+
+
         }
     }
 }

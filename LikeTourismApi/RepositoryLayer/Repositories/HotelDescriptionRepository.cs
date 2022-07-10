@@ -21,6 +21,8 @@ namespace RepositoryLayer.Repositories
         public async Task<HotelDescription> GetDescAsync(int id)
         {
             var entity = await entities.Where(m => m.SoftDelete == false).FirstOrDefaultAsync(m => m.Id == id);
+
+
             if (entity is null) throw new NullReferenceException();
             return entity;
         }

@@ -47,5 +47,13 @@ namespace Api.Controllers
             await _service.DeleteAsync(id);
             return Ok();
         }
+
+        [HttpPut]
+        [Route("Edit/{id}")]
+        public async Task<IActionResult> Edit([FromRoute] int id, [FromBody] HotelDescriptionEditDto hotelDescription)
+        {
+            await _service.UpdateAsync(id, hotelDescription);
+            return Ok();
+        }
     }
 }

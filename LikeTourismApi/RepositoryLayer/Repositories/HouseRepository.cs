@@ -19,6 +19,7 @@ namespace RepositoryLayer.Repositories
         public async Task<List<House>> GetAllHouseAsync()
         {
             return await entities.Include(m => m.FamousCity).ToListAsync();
+
         }
     }
 }

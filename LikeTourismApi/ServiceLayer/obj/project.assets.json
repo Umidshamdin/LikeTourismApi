@@ -6834,11 +6834,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Umid\\Desktop\\Api-LikeTourism\\LikeTourismApi\\ServiceLayer\\ServiceLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Umid\\Desktop\\LikeTest\\LikeTourismApi\\ServiceLayer\\ServiceLayer.csproj",
       "projectName": "ServiceLayer",
-      "projectPath": "C:\\Users\\Umid\\Desktop\\Api-LikeTourism\\LikeTourismApi\\ServiceLayer\\ServiceLayer.csproj",
+      "projectPath": "C:\\Users\\Umid\\Desktop\\LikeTest\\LikeTourismApi\\ServiceLayer\\ServiceLayer.csproj",
       "packagesPath": "C:\\Users\\Umid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Umid\\Desktop\\Api-LikeTourism\\LikeTourismApi\\ServiceLayer\\obj\\",
+      "outputPath": "C:\\Users\\Umid\\Desktop\\LikeTest\\LikeTourismApi\\ServiceLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Umid\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6855,11 +6855,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Umid\\Desktop\\Api-LikeTourism\\LikeTourismApi\\DomainLayer\\DomainLayer.csproj": {
-              "projectPath": "C:\\Users\\Umid\\Desktop\\Api-LikeTourism\\LikeTourismApi\\DomainLayer\\DomainLayer.csproj"
+            "C:\\Users\\Umid\\Desktop\\LikeTest\\LikeTourismApi\\DomainLayer\\DomainLayer.csproj": {
+              "projectPath": "C:\\Users\\Umid\\Desktop\\LikeTest\\LikeTourismApi\\DomainLayer\\DomainLayer.csproj"
             },
-            "C:\\Users\\Umid\\Desktop\\Api-LikeTourism\\LikeTourismApi\\RepositoryLayer\\RepositoryLayer.csproj": {
-              "projectPath": "C:\\Users\\Umid\\Desktop\\Api-LikeTourism\\LikeTourismApi\\RepositoryLayer\\RepositoryLayer.csproj"
+            "C:\\Users\\Umid\\Desktop\\LikeTest\\LikeTourismApi\\RepositoryLayer\\RepositoryLayer.csproj": {
+              "projectPath": "C:\\Users\\Umid\\Desktop\\LikeTest\\LikeTourismApi\\RepositoryLayer\\RepositoryLayer.csproj"
             }
           }
         }

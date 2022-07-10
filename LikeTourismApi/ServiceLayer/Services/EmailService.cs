@@ -39,7 +39,7 @@ namespace ServiceLayer.Services
         public void Register(RegisterDto registerDto, string link)
         {
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("ITicket", "liketourism13@gmail.com"));
+            message.From.Add(new MailboxAddress("LikeTourism", "liketourism13@gmail.com"));
             message.To.Add(new MailboxAddress(registerDto.FullName, registerDto.Email));
             message.Subject = "Confirm Email";
             string emailbody = string.Empty;
@@ -59,12 +59,12 @@ namespace ServiceLayer.Services
             smtp.Disconnect(true);
         }
 
-        public void OrderCreate(string email, string hotelname, string fullname, string phonenumber)
+        public void OrderCreate(string email, string fullname, string reservationName, string phoneNumber)
         {
 
             var message = new MimeMessage();
 
-            message.From.Add(new MailboxAddress("ITicket", "code.test.iticket@gmail.com"));
+            message.From.Add(new MailboxAddress("LikeTourism", "liketourism13@gmail.com"));
 
             message.To.Add(new MailboxAddress("", email));
 
@@ -76,12 +76,44 @@ namespace ServiceLayer.Services
             }
 
 
-            emailbody = emailbody.Replace("{{hotelname}}", $"{hotelname}").Replace("{{fullname}}", $"{fullname}").Replace("{{phonenumber}}", $"{phonenumber}");
+            emailbody = emailbody.Replace("{{fullname}}", $"{fullname}").Replace("{{reservationName}}", $"{reservationName}").Replace("{{phoneNumber}}", $"{phoneNumber}");
             message.Body = new TextPart(TextFormat.Html) { Text = emailbody };
 
             using var smtp = new SmtpClient();
             smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("code.test.iticket@gmail.com", "psutapkrmjbciuct");
+            smtp.Authenticate("liketourism13@gmail.com", "tgimartithciifqc");
+            smtp.Send(message);
+            smtp.Disconnect(true);
+
+        }
+
+        public void ForgotPassword(AppUser user, string url, ForgotPasswordDto forgotPassword)
+        {
+
+            var message = new MimeMessage();
+
+            message.From.Add(new MailboxAddress("LikeTourism", "liketourism13@gmail.com"));
+
+            message.To.Add(new MailboxAddress(user.FullName, forgotPassword.Email));
+            message.Subject = "Reset Password";
+
+            string emailbody = string.Empty;
+
+            using (StreamReader streamReader = new StreamReader(Path.Combine(_env.WebRootPath, "Templates", "Reset.html")))
+            {
+                emailbody = streamReader.ReadToEnd();
+            }
+
+
+
+            emailbody = emailbody.Replace("{{fullname}}", $"{user.FullName}").Replace("{{code}}", $"{url}");
+
+            message.Body = new TextPart(TextFormat.Html) { Text = emailbody };
+
+            using var smtp = new SmtpClient();
+
+            smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+            smtp.Authenticate("liketourism13@gmail.com", "tgimartithciifqc");
             smtp.Send(message);
             smtp.Disconnect(true);
 

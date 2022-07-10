@@ -7,6 +7,9 @@ using ServiceLayer.DTOs.HotelDescription;
 using ServiceLayer.DTOs.HotelList;
 using ServiceLayer.DTOs.HotelListImages;
 using ServiceLayer.DTOs.House;
+using ServiceLayer.DTOs.HouseImages;
+using ServiceLayer.DTOs.HouseRoom;
+using ServiceLayer.DTOs.HouseRoomImages;
 using ServiceLayer.DTOs.Order;
 using ServiceLayer.DTOs.Reservation;
 using ServiceLayer.DTOs.RoomImages;
@@ -28,8 +31,16 @@ namespace ServiceLayer.Mapping
             CreateMap<HotelListImages, HotelListImagesDto>().ReverseMap();
             CreateMap<HotelDescription, HotelDescriptionDto>().ReverseMap();
             CreateMap<AppUser, RegisterDto>().ReverseMap();
-            CreateMap<Order, OrderDto>().ReverseMap();
+            CreateMap<OrderDto, Order>().ReverseMap();
             CreateMap<UserDto, AppUser>().ReverseMap();
+            CreateMap<HouseImages, HouseImagesDto>().ReverseMap();
+            CreateMap<HouseRoom, HouseRoomDto>().ReverseMap();
+            CreateMap<HouseRoomImages, HouseRoomImagesDto>().ReverseMap();
+
+
+
+
+            CreateMap<AppUser, UpdatePasswordDto>().ReverseMap();
 
 
 
@@ -53,6 +64,13 @@ namespace ServiceLayer.Mapping
             CreateMap<RoomImages, CreateRoomImageDto>().ReverseMap();
             CreateMap<HotelListImages, CreateHotelListImagesDto>().ReverseMap();
             CreateMap<HotelDescription, HotelDescriptionCreateDto>().ReverseMap();
+            CreateMap<HouseImages, HouseImagesCreateDto>().ReverseMap();
+            CreateMap<HouseRoom, HouseRoomCreateDto>().ReverseMap();
+            CreateMap<HouseRoomImages, CreateHouseRoomImagesDto>().ReverseMap();
+
+
+
+
 
 
 
@@ -66,7 +84,16 @@ namespace ServiceLayer.Mapping
             CreateMap<FamousCity, FamousCityEditDto>().ReverseMap();
             CreateMap<Slider, SliderEditDto>().ReverseMap();
             CreateMap<HotelList, HotelListEditDto>().ReverseMap();
+            CreateMap<House, HouseEditDto>().ReverseMap();
+
+
             CreateMap<HotelListImages, HotelListImagesEditDto>().ReverseMap();
+            CreateMap<HotelDescription, HotelDescriptionEditDto>().ReverseMap();
+            CreateMap<Reservation, ReservationEditDto>().ReverseMap();
+            CreateMap<HouseRoom, HouseRoomEditDto>().ReverseMap();
+
+
+
 
 
 

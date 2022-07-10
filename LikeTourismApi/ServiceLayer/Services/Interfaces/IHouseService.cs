@@ -9,6 +9,12 @@ namespace ServiceLayer.Services.Interfaces
         Task<List<HouseListDto>> GetAllAsync();
         Task InsertAsync(HouseCreateDto house);
 
+        Task DeleteAsync(int id);
+        Task UpdateAsync(int id, HouseEditDto house);
+        Task<HouseListDto> GetAsync(int id);
+
+
+
 
 
 

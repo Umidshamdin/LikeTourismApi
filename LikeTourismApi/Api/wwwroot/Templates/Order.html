@@ -10,7 +10,7 @@
         .cardWrap {
             width: 27em;
             margin: 3em auto;
-            color: #fff;
+           
             font-family: sans-serif;
         }
 
@@ -20,13 +20,13 @@
             float: left;
             position: relative;
             padding: 1em;
-            margin-top: 100px;
+            
         }
 
         .cardLeft {
             border-top-left-radius: 8px;
             border-bottom-left-radius: 8px;
-            width: 16em;
+            width: 500px;
         }
 
         .cardRight {
@@ -111,7 +111,7 @@
             position: relative;
             width: 2em;
             height: 1.5em;
-            background: #fff;
+           
             margin: 0 auto;
             border-radius: 1em/0.6em;
             z-index: 1;
@@ -127,7 +127,7 @@
             .eye:before {
                 width: 1em;
                 height: 1em;
-                background: rgba(255,221,0);
+               
                 z-index: 2;
                 left: 8px;
                 top: 4px;
@@ -136,7 +136,7 @@
             .eye:after {
                 width: 0.5em;
                 height: 0.5em;
-                background: #fff;
+                
                 z-index: 3;
                 left: 12px;
                 top: 8px;
@@ -170,26 +170,27 @@
 <body>
     <div class="cardWrap">
         <div class="card cardLeft">
-            <h1>{{hotelname}}</h1>
+
+            <h4>Bronlaşma tamamlandı</h4>
+
+
+            <h6>{{reservationName}}</h6>
+            
+
+
 
             <div class="name">
-                <h2>{{fullname}}</h2>
-                <span>name</span>
+                <h5>{{fullname}}</h5>
+                
             </div>
-            <div class="seat">
-                <h2>{{phonenumber}}</h2>
-                <span>seat</span>
-            </div>
-            r
+            <!--<div class="phone">
+                <h4>{{phoneNumber}}</h4>
+               
+            </div>-->
+            
 
         </div>
-        <div class="card cardRight">
-            <div class="eye"></div>
-            <div class="number">
-                <span>seat</span>
-            </div>
-            <div class="barcode"></div>
-        </div>
+       
 
     </div>
 </body>

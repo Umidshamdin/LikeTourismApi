@@ -45,5 +45,12 @@ namespace ServiceLayer.Services
             await _repository.CreateAsync(_mapper.Map<HotelDescription>(hotelDescription));
 
         }
+
+        public async Task UpdateAsync(int id, HotelDescriptionEditDto hotelDescription)
+        {
+            var entity = await _repository.GetAsync(id);
+            _mapper.Map(hotelDescription, entity);
+            await _repository.UpdateAsync(entity);
+        }
     }
 }

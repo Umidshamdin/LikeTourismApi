@@ -1,4 +1,5 @@
 ﻿using DomainLayer.Common;
+using System.Collections.Generic;
 
 namespace DomainLayer.Entities
 {
@@ -9,6 +10,11 @@ namespace DomainLayer.Entities
         public int Prise { get; set; }
         public float Rating { get; set; }
         public string RatingCommit { get; set; }
+
+        public List<HouseImages> HouseImages { get; set; }
+
+
+
         public int FamousCityId { get; set; }
         public FamousCity FamousCity { get; set; }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GN0x7YSoKReZjfe3WwrsTgbEstMjQTJuF57bpMHE0Xm1BaIvqcGuEOvVfmlbvYndohIrQahC9B0texNgSsZyEQ==",
+  "dgSpecHash": "vPWBy1jThJA2aYU62FiOLpG0RLNFOg/uLQHLFGsM57ofIxjGw6j9t4fAjvmX2zX7QyAqnVPiQhE/+p9wAGF08A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Umid\\Desktop\\Api-LikeTourism\\LikeTourismApi\\Api\\Api.csproj",
+  "projectFilePath": "C:\\Users\\Umid\\Desktop\\LikeTest\\LikeTourismApi\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Umid\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Umid\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

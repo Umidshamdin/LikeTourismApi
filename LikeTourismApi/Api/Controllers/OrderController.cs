@@ -36,11 +36,15 @@ namespace Api.Controllers
             orderDto.ReservationId = orderMailDto.ReservationId;
             orderDto.HotelListId = orderMailDto.HotelListId;
             orderDto.Email = orderMailDto.Email;
-            orderDto.FullName = orderMailDto.FullName;
             orderDto.PhoneNumber = orderMailDto.PhoneNumber;
-            
+            orderDto.FullName = orderMailDto.FullName;
+
+
+
+
+
             await _service.CreateAsync(orderDto);
-            _emailService.OrderCreate(orderMailDto.Email, "Hilton", orderMailDto.FullName,  orderMailDto.PhoneNumber);
+            _emailService.OrderCreate(orderMailDto.Email, orderMailDto.FullName,  orderMailDto.ReservationName, orderMailDto.PhoneNumber);
             return Ok();
         }
     }

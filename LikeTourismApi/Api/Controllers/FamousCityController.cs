@@ -58,5 +58,12 @@ namespace Api.Controllers
             await _service.DeleteAsync(id);
             return Ok();
         }
+
+        [HttpGet]
+        [Route("GetAllByName/{txt}")]
+        public async Task<IActionResult> GetAllByName([FromRoute] string txt)
+        {
+            return Ok(await _service.GetCityNameAsync(txt));
+        }
     }
 }

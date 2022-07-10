@@ -11,6 +11,8 @@ namespace ServiceLayer.Services.Interfaces
         Task InsertAsync(ReservationCreateDto reservation);
         Task<ReservationDto> GetAsync(int id);
 
+        Task DeleteAsync(int id);
+        Task UpdateAsync(int id, ReservationEditDto reservation);
 
 
 

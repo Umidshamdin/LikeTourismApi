@@ -1,4 +1,5 @@
-﻿using ServiceLayer.DTOs.AppUser;
+﻿using DomainLayer.Entities;
+using ServiceLayer.DTOs.AppUser;
 using System.Threading.Tasks;
 
 namespace ServiceLayer.Services.Interfaces
@@ -8,6 +9,7 @@ namespace ServiceLayer.Services.Interfaces
         void Register(RegisterDto registerDto, string link);
 
         Task ConfirmEmail(string userId, string token);
-        void OrderCreate(string email, string hotelname, string fullname, string phonenumber);
+        void OrderCreate(string email, string fullname, string reservationname, string phoneNumber);
+        void ForgotPassword(AppUser user, string url, ForgotPasswordDto forgotPassword);
     }
 }

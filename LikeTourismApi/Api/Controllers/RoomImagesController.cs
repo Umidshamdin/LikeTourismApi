@@ -16,10 +16,10 @@ namespace Api.Controllers
             _service = service;
         }
         [HttpGet]
-        [Route("GetAll")]
-        public async Task<IActionResult> GetAll()
+        [Route("GetAll/{id}")]
+        public async Task<IActionResult> GetAll([FromRoute] int id)
         {
-            return Ok(await _service.GetAllAsync());
+            return Ok(await _service.GetAllAsync(id));
         }
 
 
@@ -38,6 +38,16 @@ namespace Api.Controllers
         {
             var result = await _service.GetAsync(id);
             return Ok(result);
+        }
+
+
+
+        [HttpDelete]
+        [Route("Delete/{id}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+            await _service.DeleteAsync(id);
+            return Ok();
         }
     }
 }

@@ -30,6 +30,12 @@ namespace ServiceLayer
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IHouseImagesService, HouseImagesService>();
+            services.AddScoped<IHouseRoomService, HouseRoomService>();
+            services.AddScoped<IHouseRoomImagesService, HouseRoomImagesService>();
+
+
+
 
 
 

@@ -1,4 +1,5 @@
-﻿using ServiceLayer.DTOs.AppUser;
+﻿using DomainLayer.Entities;
+using ServiceLayer.DTOs.AppUser;
 using System.Threading.Tasks;
 
 namespace ServiceLayer.Services.Interfaces
@@ -9,6 +10,8 @@ namespace ServiceLayer.Services.Interfaces
         Task<string> Login(LoginDto loginDto);
         Task ConfirmEmail(string userId, string token);
         Task<UserDto> GetUserByEmailAsync(string email);
+
+        Task UpdatePassword(AppUser appUser, UpdatePasswordDto updatePasswordDto);
 
     }
 }
