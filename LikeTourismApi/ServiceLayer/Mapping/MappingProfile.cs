@@ -14,6 +14,7 @@ using ServiceLayer.DTOs.Order;
 using ServiceLayer.DTOs.Reservation;
 using ServiceLayer.DTOs.RoomImages;
 using ServiceLayer.DTOs.Slider;
+using ServiceLayer.DTOs.Villa;
 
 namespace ServiceLayer.Mapping
 {
@@ -36,6 +37,8 @@ namespace ServiceLayer.Mapping
             CreateMap<HouseImages, HouseImagesDto>().ReverseMap();
             CreateMap<HouseRoom, HouseRoomDto>().ReverseMap();
             CreateMap<HouseRoomImages, HouseRoomImagesDto>().ReverseMap();
+            CreateMap<Villa, VillasDto>().ReverseMap();
+
 
 
 
@@ -67,6 +70,8 @@ namespace ServiceLayer.Mapping
             CreateMap<HouseImages, HouseImagesCreateDto>().ReverseMap();
             CreateMap<HouseRoom, HouseRoomCreateDto>().ReverseMap();
             CreateMap<HouseRoomImages, CreateHouseRoomImagesDto>().ReverseMap();
+            CreateMap<Villa, VillaCreateDto>().ReverseMap();
+
 
 
 

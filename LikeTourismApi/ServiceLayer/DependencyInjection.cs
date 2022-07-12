@@ -33,6 +33,8 @@ namespace ServiceLayer
             services.AddScoped<IHouseImagesService, HouseImagesService>();
             services.AddScoped<IHouseRoomService, HouseRoomService>();
             services.AddScoped<IHouseRoomImagesService, HouseRoomImagesService>();
+            services.AddScoped<IVillaService, VillaService>();
+
 
 
 
